@@ -1,13 +1,15 @@
 import React, { useEffect } from 'react';
-import './Loader.css'; // Ensure you have your updated CSS for the loader
+import './Loader.css'; // Ensure this path is correct
 
 const Loader = ({ darkMode }) => {
   useEffect(() => {
     const handleLoad = () => {
       const preloader = document.getElementById('loading');
-      setTimeout(() => {
-        preloader.style.display = 'none'; // Hide preloader after 4 seconds
-      }, 4000); // 4000ms (4 seconds) delay
+      if (preloader) {
+        setTimeout(() => {
+          preloader.style.display = 'none'; // Hide preloader after 4 seconds
+        }, 4000); // 4000ms (4 seconds) delay
+      }
     };
 
     window.addEventListener('load', handleLoad);

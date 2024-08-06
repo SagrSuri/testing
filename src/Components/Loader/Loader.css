@@ -17,7 +17,7 @@
   height: 100vh;
   display: flex;
   position: fixed;
-  z-index: 99999;
+  z-index: 99999; /* Ensures the loader is on top of all other content */
   align-items: center;
   justify-content: center;
   background: var(--bg-light); /* Default to light mode */
